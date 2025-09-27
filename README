@@ -8,7 +8,7 @@ Este proyecto es una API RESTful construida con Node.js para la gestión de usua
 - **Manejo de UUIDs**: Los identificadores de usuario se almacenan en formato binario y se convierten a texto para las consultas.
 - **Cálculo de edad**: Se calcula la edad del usuario a partir de la fecha de nacimiento usando `date-fns`.
 - **Eliminación en cascada**: Al eliminar un usuario, también se eliminan sus estadísticas relacionadas.
-- **Actualización parcial**: Permite actualizar campos específicos del usuario.
+- **Actualización parcial**: Permite actualizar campos específicos del usuario (nombre y apellido).
 
 ## Estructura de archivos
 
