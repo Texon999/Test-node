@@ -1,0 +1,64 @@
+### 1. Crear un nuevo usuario
+POST http://localhost:1235/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Samuel",
+  "apellido": "Clavito"
+ 
+}
+
+
+
+### 2. Obtener todos los usuarios  
+GET http://localhost:1235/usuarios
+Content-Type: application/json
+
+
+// falta hacer un getall que incluya usuario y stats
+
+### 3. Crear stats para un usuario
+POST http://localhost:1235/stats
+Content-Type: application/json
+
+{
+  "danio": 10,
+  "mana": 2,
+  "id_usuario": "02f52fc6-9bdf-11f0-803c-0250e1732e8c"
+}
+
+
+
+###  Consultar un usuario por ID
+GET http://localhost:1235/usuarios/02f52fc6-9bdf-11f0-803c-0250e1732e8c
+Content-Type: application/json
+
+
+
+###  con id calculadr la eda  // validacion para el futuro
+GET http://localhost:1235/usuarios/02f52fc6-9bdf-11f0-803c-0250e1732e8c?fecha_nacimiento=2038-08-14
+Content-Type: application/json
+
+
+
+
+###  Consultar stats de un usuario por ID
+GET http://localhost:1235/stats/550e8400-e29b-41d4-a716-446655440000
+Content-Type: application/json
+
+###### Eliminar un usuario mediante el id 
+DELETE http://localhost:1235/usuarios/02f52fc6-9bdf-11f0-803c-0250e1732e8c
+Content-Type: application/json
+
+
+
+
+#### Actualizar el usuario
+PATCH http://localhost:1235/usuarios/02f52fc6-9bdf-11f0-803c-0250e1732e8c
+Content-Type: application/json
+
+{
+  
+"nombre": 
+
+}
