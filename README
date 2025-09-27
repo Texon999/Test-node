@@ -1,0 +1,67 @@
+# Test-node
+
+Este proyecto es una API RESTful construida con Node.js para la gestión de usuarios y sus estadísticas. Utiliza MySQL como base de datos y sigue buenas prácticas de manejo de UUIDs y fechas.
+
+## Características
+
+- **CRUD de usuarios**: Crear, leer, actualizar y eliminar usuarios.
+- **Manejo de UUIDs**: Los identificadores de usuario se almacenan en formato binario y se convierten a texto para las consultas.
+- **Cálculo de edad**: Se calcula la edad del usuario a partir de la fecha de nacimiento usando `date-fns`.
+- **Eliminación en cascada**: Al eliminar un usuario, también se eliminan sus estadísticas relacionadas.
+- **Actualización parcial**: Permite actualizar campos específicos del usuario.
+
+## Estructura de archivos
+
+- `models/User.js`: Lógica principal para la gestión de usuarios.
+- `db/db.js`: Configuración de la conexión a la base de datos MySQL.
+
+## Instalación
+
+1. Clona el repositorio.
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Configura la base de datos en `db/db.js`.
+
+## Migraciones
+
+Agrega la columna `fecha_nacimiento` en la tabla `usuario`:
+
+```sql
+ALTER TABLE usuario ADD COLUMN fecha_nacimiento DATE;
+```
+
+## Uso
+
+Ejemplo para crear un usuario:
+
+```js
+await userModel.create({
+  nombre: 'Juan',
+  apellido: 'Pérez',
+  fecha_nacimiento: '1990-05-15'
+});
+```
+
+## Endpoints sugeridos
+
+- `GET /usuarios`: Listar todos los usuarios.
+- `GET /usuarios/:id`: Obtener usuario por ID.
+- `POST /usuarios`: Crear usuario.
+- `PATCH /usuarios/:id`: Actualizar usuario.
+- `DELETE /usuarios/:id`: Eliminar usuario.
+
+## Dependencias principales
+
+- `mysql2`
+- `date-fns`
+
+## Notas
+
+- Asegúrate de que la base de datos esté configurada correctamente y que las tablas tengan las columnas necesarias.
+- El manejo de UUIDs requiere que los datos se almacenen en formato binario y se conviertan en las consultas.
+
+---
+
+¡Contribuciones y sugerencias son bienvenidas!
