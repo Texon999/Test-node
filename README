@@ -23,6 +23,7 @@ Este proyecto es una API RESTful construida con Node.js para la gestión de usua
    npm install
    ```
 3. Configura la base de datos en `db/db.js`.
+4. Disfruta!
 
 ## Migraciones
 
