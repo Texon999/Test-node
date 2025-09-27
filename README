@@ -15,14 +15,6 @@ Este proyecto es una API RESTful construida con Node.js para la gestión de usua
 - `models/User.js`: Lógica principal para la gestión de usuarios.
 - `db/db.js`: Configuración de la conexión a la base de datos MySQL.
 
-## Instalación
-
-1. Clona el repositorio.
-2. Instala las dependencias:
-   ```bash
-   npm install
-   ```
-3. Configura la base de datos en `db/db.js`.
 
 ## Migraciones
 
